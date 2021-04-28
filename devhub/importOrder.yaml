@@ -1,0 +1,56 @@
+version: v4.0
+navigator:
+  name: Arleif Braganza
+  email: arleif.braganza@devfactory.com
+repo:
+  companyName: CodeNation
+  productName: devflows
+  repoUrl: 'https://github.com/trilogy-group/cn-devflows-ui'
+  repoType: Deployable service
+  branch: master
+build:
+  techStack: Node.js
+  os: Ubuntu 18.04
+  toolchainVersion: Node.js 12
+  tool: npm
+  preBuildCommand: null
+  buildCommand: echo none
+test:
+  utFramework: Mocha
+  preTestCommand: null
+  testCommand: echo none
+package:
+  packageTool: npm
+  packageCommand: echo none
+  artifactDir: ./dist
+  artifactUploadCommand: echo none
+deploy:
+  serviceName: devflows-ui
+  deploymentCheck: '#ToBeFilled'
+  stickySessions: null
+  canUseLb: true
+  stablePersistence: null
+  fixedNetworkIdentifier: null
+ports:
+  - name: mainPort
+    number: 80
+    protocol: HTTPS
+    public: true
+    path: /
+run:
+  dockerized: true
+  os: Ubuntu 18.04
+  image: ''
+  runtimeEnv: Node.js 12
+  installCommand: None
+  installDir: ''
+  runCommand: N/A will run on devflows
+  userName: root
+envs:
+  - name: qa
+    default: true
+    vars:
+      - key: APP_BACKEND_URL
+        kind: config
+        value: backend
+storage: []

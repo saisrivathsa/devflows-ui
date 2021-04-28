@@ -1,0 +1,31 @@
+version: v1
+productName: devflows
+buildEnvVars:
+  - key: PATH
+    kind: config
+    value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/nodejs/node-v12.0.0-linux-x64/bin
+  - key: LANG
+    kind: config
+    value: C.UTF-8
+  - key: LC_ALL
+    kind: config
+    value: C.UTF-8
+  - key: PIPELINE_INIT_COMMAND
+    kind: config
+    value: echo 'No init commands provided'
+build:
+    image: 652819854130.dkr.ecr.us-east-1.amazonaws.com/devhub/builder-bionic-nodejs
+    platform: linux
+    preBuildCommand: echo 'Pre build command is empty'
+    buildCommand: echo none
+test:
+    testCommand: echo none
+package:
+    artifactRepoType: npm
+    packageCommand: echo none
+    artifactDir: ./dist
+    artifactUploadCommand: echo none
+repoType: Deployable service
+release:
+    targetChartFile: devflows-ui
+    dockerized: true

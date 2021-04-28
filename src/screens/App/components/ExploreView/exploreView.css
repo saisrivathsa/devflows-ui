@@ -1,0 +1,56 @@
+.sui-search-box__submit {
+  padding: 5px 20px
+}
+
+.sui-layout-main-body{
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.explore-app{
+  text-align: left;
+  overflow-y: auto;
+}
+
+.sui-select__control{
+  height: 40px;
+}
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #00000066;
+}
+
+::-webkit-scrollbar-track{
+  background: unset !important;
+}
+
+.sui-multi-checkbox-facet__checkbox{
+  height: unset !important;
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: checkbox;
+  box-sizing: border-box !important;
+  margin: 3px 8px 3px 4px !important;
+  padding: initial !important;
+  border: initial;
+}
+
+.sui-facet-search__text-input{
+  height: 30px !important;
+}
+
+.sui-multi-checkbox-facet__option-label{
+  font-weight: unset !important;
+}
+
+.sui-search-box__submit {
+  background-color: #2185d0;
+  color: #fff;
+  background-image: none;
+}
